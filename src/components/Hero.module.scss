@@ -56,13 +56,13 @@
     .reviewScroll {
       width: 100%;
       overflow-x: auto;
-      padding: 0 8px;
 
       .reviews {
         position: relative;
         width: 1253px;
         height: 119px;
         left: 0;
+        padding: 0 8px;
       }
     }
   }
