@@ -14,14 +14,14 @@ const parent = {
     opacity: 1,
     transition: {
       delay: 0.2,
-      delayChildren: 0.3,
+      delayChildren: 0.2,
     },
   },
 }
 
 const child = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
+  hidden: { display: 'none' },
+  visible: { display: 'block' },
 }
 
 export default function Deal({ src }: { src: string }) {
@@ -130,7 +130,7 @@ const Confetti = () => {
     >
       <Lottie
         animationData={confettiData}
-        loop={true}
+        loop={false}
       ></Lottie>
     </div>
   )
