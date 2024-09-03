@@ -8,27 +8,18 @@ export default function Footer() {
   return (
     <div className={styles.wrapper}>
       <div className={styles.title}>
-        <img
-          src={titleLogo}
-          className={styles.img}
-        />
+        <img src={titleLogo} />
       </div>
       <div className={styles.buttons}>
         <a href={appDownloadLink}>
           <div className={styles.buttonIcon}>
-            <img
-              src={appstore}
-              className={styles.img}
-            />
+            <img src={appstore} />
           </div>
           <p>App Store</p>
         </a>
         <a href={appDownloadLink}>
           <div className={styles.buttonIcon}>
-            <img
-              src={googlePlay}
-              className={styles.img}
-            />
+            <img src={googlePlay} />
           </div>
           <p>Google Play</p>
         </a>
