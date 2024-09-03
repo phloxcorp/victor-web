@@ -14,15 +14,16 @@ const parent = {
   visible: {
     opacity: 1,
     transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.2,
+      duration: 0.5,
+      delayChildren: 0.3,
+      staggerChildren: 0.3,
     },
   },
 }
 
 const child = {
-  hidden: { display: 'none' },
-  visible: { display: 'block' },
+  hidden: { opacity: 0.5 },
+  visible: { opacity: 1 },
 }
 
 export default function Deal({ src }: { src: string }) {
@@ -47,8 +48,13 @@ export default function Deal({ src }: { src: string }) {
             position: 'relative',
           }}
         >
-          <img src={src} />
-          <HBar />
+          <motion.div variants={child}>
+            <img src={src} />
+            <HBar />
+          </motion.div>
+          <motion.div variants={child}>
+            <Confetti />
+          </motion.div>
           <motion.div variants={child}>
             <div className={styles.footer}>
               <Icon src={dealBlue} />
@@ -75,9 +81,6 @@ export default function Deal({ src }: { src: string }) {
                 <p>Google Play</p>
               </a>
             </div>
-          </motion.div>
-          <motion.div variants={child}>
-            <Confetti />
           </motion.div>
         </motion.div>
       ) : (
