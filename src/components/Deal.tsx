@@ -8,6 +8,22 @@ import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import confettiData from '../assets/confetti.json'
 
+const parent = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.2,
+      delayChildren: 0.2,
+    },
+  },
+}
+
+const child = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1 },
+}
+
 export default function Deal({ src }: { src: string }) {
   const [showDelayedContent, setShowDelayedContent] = useState(false)
 
@@ -23,9 +39,9 @@ export default function Deal({ src }: { src: string }) {
     <div className={styles.wrapper}>
       {showDelayedContent ? (
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.2, duration: 0.3 } }}
-          exit={{ opacity: 0 }}
+          initial="hidden"
+          animate="visible"
+          variants={parent}
           style={{
             position: 'relative',
           }}
@@ -57,7 +73,9 @@ export default function Deal({ src }: { src: string }) {
               <p>Google Play</p>
             </button>
           </div>
-          <Confetti />
+          <motion.div variants={child}>
+            <Confetti />
+          </motion.div>
         </motion.div>
       ) : (
         <AnimatePresence>
