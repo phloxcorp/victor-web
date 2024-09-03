@@ -14,7 +14,7 @@ const parent = {
     opacity: 1,
     transition: {
       delay: 0.2,
-      delayChildren: 0.2,
+      delayChildren: 0.3,
     },
   },
 }
