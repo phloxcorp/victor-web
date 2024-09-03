@@ -11,7 +11,7 @@
     justify-content: center;
     gap: 16px;
 
-    button {
+    a {
       display: flex;
       width: 140px;
       height: 52px;
@@ -28,6 +28,7 @@
       font-size: 1rem;
       font-style: normal;
       font-weight: 600;
+      text-decoration: none;
 
       &:first-child {
         background-color: #181717;

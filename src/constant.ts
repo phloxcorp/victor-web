@@ -1,0 +1,1 @@
+export const appDownloadLink = 'https://dealscount.sng.link/Diojz/c50q?_smtype=3'

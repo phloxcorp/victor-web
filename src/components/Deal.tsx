@@ -7,6 +7,7 @@ import loadingData from '../assets/loading.json'
 import Lottie, { LottieRefCurrentProps } from 'lottie-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import confettiData from '../assets/confetti.json'
+import { appDownloadLink } from '../constant'
 
 const parent = {
   hidden: { opacity: 0 },
@@ -60,18 +61,18 @@ export default function Deal({ src }: { src: string }) {
             </div>
           </div>
           <div className={styles.buttons}>
-            <button>
+            <a href={appDownloadLink}>
               <div className={styles.buttonIcon}>
                 <img src={appstore} />
               </div>
               <p>App Store</p>
-            </button>
-            <button>
+            </a>
+            <a href={appDownloadLink}>
               <div className={styles.buttonIcon}>
                 <img src={googlePlay} />
               </div>
               <p>Google Play</p>
-            </button>
+            </a>
           </div>
           <motion.div variants={child}>
             <Confetti />

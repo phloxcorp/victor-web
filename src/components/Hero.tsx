@@ -6,6 +6,7 @@ import reviewsPc from '../assets/reviews_pc.png'
 import { useMediaQuery } from 'usehooks-ts'
 import coin from '../assets/coin.png'
 import deal from '../assets/deal.png'
+import { appDownloadLink } from '../constant'
 
 export default function Hero() {
   const pc = useMediaQuery('(min-width: 1080px)')
@@ -15,18 +16,18 @@ export default function Hero() {
       <div className={styles.content}>
         <Title />
         <div className={styles.buttons}>
-          <button>
+          <a href={appDownloadLink}>
             <div className={styles.buttonIcon}>
               <img src={appstore} />
             </div>
             <p>App Store</p>
-          </button>
-          <button>
+          </a>
+          <a href={appDownloadLink}>
             <div className={styles.buttonIcon}>
               <img src={googlePlay} />
             </div>
             <p>Google Play</p>
-          </button>
+          </a>
         </div>
         <div className={styles.reviews}>
           {pc ? <img src={reviewsPc} /> : <img src={reviewsMo} />}
