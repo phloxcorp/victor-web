@@ -16,13 +16,13 @@ const parent = {
     transition: {
       duration: 0.5,
       delayChildren: 0.3,
-      staggerChildren: 0.3,
+      staggerChildren: 0.2,
     },
   },
 }
 
 const child = {
-  hidden: { opacity: 0.5 },
+  hidden: { opacity: 0.95 },
   visible: { opacity: 1 },
 }
 
@@ -55,7 +55,12 @@ export default function Deal({ src }: { src: string }) {
           <motion.div variants={child}>
             <Confetti />
           </motion.div>
-          <motion.div variants={child}>
+          <motion.div
+            variants={child}
+            transition={{
+              duration: 0.1,
+            }}
+          >
             <div className={styles.footer}>
               <Icon src={dealBlue} />
               <div className={styles.content}>
