@@ -1,0 +1,113 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .imageWrapper {
+    margin-top: 30px;
+    width: 70px;
+  }
+
+  h1 {
+    color: #181717;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: -0.44px;
+  }
+
+  .h1WithIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .itemGrid {
+    margin-top: 36px;
+    margin-bottom: 48px;
+    display: grid;
+    width: 321px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .arrow {
+    width: 24px;
+    height: 24px;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (min-width: 1080px) {
+  .wrapper {
+    .itemGrid {
+      width: 555px;
+      column-gap: 68px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.DialogOverlay {
+  opacity: 0.6;
+  background: black;
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  background-color: white;
+  border-radius: 24px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 343px;
+  padding-bottom: 32px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  .DialogClose {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+    width: 32px;
+    height: 32px;
+    border-radius: 100vmax;
+    background-color: rgba($color: #fff, $alpha: 0.1);
+    border: none;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    .close {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

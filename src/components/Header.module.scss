@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.imageWrapper {
+  margin: 13px 0 16px 0;
+  width: 92px;
+}
+
+@media screen and (min-width: 1080px) {
+  .wrapper {
+    justify-content: flex-start;
+    .imageWrapper {
+      width: 120px;
+      margin-left: 40px;
+    }
+  }
+}
