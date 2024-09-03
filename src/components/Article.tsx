@@ -17,8 +17,20 @@ import deal5 from '../assets/deal5.png'
 import close from '../assets/close.png'
 import * as Dialog from '@radix-ui/react-dialog'
 import Deal from './Deal'
+import { useEffect } from 'react'
 
 export default function Article() {
+  useEffect(() => {
+    function preloading(imageArray: string[]) {
+      imageArray.forEach(url => {
+        const image = new Image()
+        image.src = url
+      })
+    }
+
+    preloading(items.map(el => el.deal))
+  }, [])
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.imageWrapper}>
