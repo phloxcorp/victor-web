@@ -14,8 +14,8 @@ const parent = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.2,
       delayChildren: 0.2,
+      staggerChildren: 0.2,
     },
   },
 }
@@ -49,31 +49,33 @@ export default function Deal({ src }: { src: string }) {
         >
           <img src={src} />
           <HBar />
-          <div className={styles.footer}>
-            <Icon src={dealBlue} />
-            <div className={styles.content}>
-              <h1>Download</h1>
-              <p>
-                Track prices on Amazon
-                <br />
-                instantly with Dealscount!
-              </p>
+          <motion.div variants={child}>
+            <div className={styles.footer}>
+              <Icon src={dealBlue} />
+              <div className={styles.content}>
+                <h1>Download</h1>
+                <p>
+                  Track prices on Amazon
+                  <br />
+                  instantly with Dealscount!
+                </p>
+              </div>
             </div>
-          </div>
-          <div className={styles.buttons}>
-            <a href={appDownloadLink}>
-              <div className={styles.buttonIcon}>
-                <img src={appstore} />
-              </div>
-              <p>App Store</p>
-            </a>
-            <a href={appDownloadLink}>
-              <div className={styles.buttonIcon}>
-                <img src={googlePlay} />
-              </div>
-              <p>Google Play</p>
-            </a>
-          </div>
+            <div className={styles.buttons}>
+              <a href={appDownloadLink}>
+                <div className={styles.buttonIcon}>
+                  <img src={appstore} />
+                </div>
+                <p>App Store</p>
+              </a>
+              <a href={appDownloadLink}>
+                <div className={styles.buttonIcon}>
+                  <img src={googlePlay} />
+                </div>
+                <p>Google Play</p>
+              </a>
+            </div>
+          </motion.div>
           <motion.div variants={child}>
             <Confetti />
           </motion.div>
