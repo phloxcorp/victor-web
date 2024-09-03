@@ -29,8 +29,10 @@ export default function Hero() {
             <p>Google Play</p>
           </a>
         </div>
-        <div className={styles.reviews}>
-          {pc ? <img src={reviewsPc} /> : <img src={reviewsMo} />}
+        <div className={styles.reviewScroll}>
+          <div className={styles.reviews}>
+            {pc ? <img src={reviewsPc} /> : <img src={reviewsMo} />}
+          </div>
         </div>
       </div>
     </div>
