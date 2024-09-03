@@ -53,12 +53,17 @@
       }
     }
 
-    .reviews {
-      position: relative;
-      width: 1253px;
-      height: 119px;
-      left: 0;
-      margin-left: 8px;
+    .reviewScroll {
+      width: 100%;
+      overflow-x: auto;
+      padding: 0 8px;
+
+      .reviews {
+        position: relative;
+        width: 1253px;
+        height: 119px;
+        left: 0;
+      }
     }
   }
 }
@@ -95,9 +100,11 @@
         }
       }
 
-      .reviews {
-        position: static;
-        margin: 0 auto;
+      .reviewScroll {
+        .reviews {
+          position: static;
+          margin: 0 auto;
+        }
       }
     }
   }
