@@ -100,6 +100,8 @@
     background-color: rgba($color: #fff, $alpha: 0.1);
     border: none;
     outline: none;
+    display: grid;
+    place-items: center;
 
     &:focus {
       outline: none;
@@ -108,8 +110,6 @@
     .close {
       width: 20px;
       height: 20px;
-      display: grid;
-      place-items: center;
     }
   }
 }
