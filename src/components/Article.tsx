@@ -96,10 +96,12 @@ const ItemGrid = () => {
             <Dialog.Overlay className={styles.DialogOverlay} />
             <Dialog.Content className={styles.DialogContent}>
               <Deal src={el.deal} />
-              <Dialog.Close className={styles.DialogClose}>
-                <div className={styles.close}>
-                  <img src={close} />
-                </div>
+              <Dialog.Close asChild>
+                <button className={styles.DialogClose}>
+                  <div className={styles.close}>
+                    <img src={close} />
+                  </div>
+                </button>
               </Dialog.Close>
             </Dialog.Content>
           </Dialog.Portal>
