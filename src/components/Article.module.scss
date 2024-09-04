@@ -71,6 +71,13 @@
   }
 }
 
+.DialogTrigger {
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
 .DialogOverlay {
   opacity: 0.6;
   background: black;

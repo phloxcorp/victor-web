@@ -18,6 +18,7 @@ import close from '../assets/close.png'
 import * as Dialog from '@radix-ui/react-dialog'
 import Deal from './Deal'
 import { useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Article() {
   useEffect(() => {
@@ -101,8 +102,13 @@ const ItemGrid = () => {
     <div className={styles.itemGrid}>
       {items.map((el, i) => (
         <Dialog.Root key={i}>
-          <Dialog.Trigger asChild>
-            <img src={el.item} />
+          <Dialog.Trigger className={styles.DialogTrigger}>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 1 }}
+            >
+              <img src={el.item} />
+            </motion.div>
           </Dialog.Trigger>
           <Dialog.Portal>
             <Dialog.Overlay className={styles.DialogOverlay} />
