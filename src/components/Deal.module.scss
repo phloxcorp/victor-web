@@ -3,6 +3,11 @@
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
   overflow: hidden;
+  position: relative;
+
+  .graph {
+    position: relative;
+  }
 
   .hBar {
     width: 100%;
@@ -80,6 +85,14 @@
   }
 
   .loading {
-    margin-top: 32px;
+    position: absolute;
+    top: 50px;
+  }
+
+  .confetti {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    pointer-events: none;
   }
 }
