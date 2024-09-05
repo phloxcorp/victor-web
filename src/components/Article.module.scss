@@ -79,8 +79,7 @@
 }
 
 .DialogOverlay {
-  opacity: 0.6;
-  background: black;
+  background: rgba($color: black, $alpha: 0.6);
   position: fixed;
   inset: 0;
   animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
