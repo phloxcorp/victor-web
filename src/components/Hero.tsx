@@ -7,9 +7,11 @@ import { useMediaQuery } from 'usehooks-ts'
 import coin from '../assets/coin.png'
 import deal from '../assets/deal.png'
 import { appDownloadLink } from '../constant'
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   const pc = useMediaQuery('(min-width: 1080px)')
+  const d = 80
 
   return (
     <div className={styles.wrapper}>
@@ -30,9 +32,36 @@ export default function Hero() {
           </a>
         </div>
         <div className={styles.reviewScroll}>
-          <div className={styles.reviews}>
-            {pc ? <img src={reviewsPc} /> : <img src={reviewsMo} />}
-          </div>
+          <motion.div
+            initial={{ x: '100%' }}
+            animate={{ x: '-100%' }}
+            transition={{
+              duration: d,
+              delay: -d,
+              repeatType: 'loop',
+              ease: 'linear',
+              repeat: Infinity,
+            }}
+          >
+            <div className={styles.reviews}>
+              {pc ? <img src={reviewsPc} /> : <img src={reviewsMo} />}
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ x: '0%' }}
+            animate={{ x: '-200%' }}
+            transition={{
+              duration: d,
+              repeatType: 'loop',
+              ease: 'linear',
+              repeat: Infinity,
+              delay: -d / 2,
+            }}
+          >
+            <div className={styles.reviews}>
+              {pc ? <img src={reviewsPc} /> : <img src={reviewsMo} />}
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

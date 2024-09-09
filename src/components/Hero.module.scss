@@ -54,12 +54,15 @@
     }
 
     .reviewScroll {
+      $max: 1253px;
       width: 100%;
-      overflow-x: auto;
+      max-width: $max;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
 
       .reviews {
-        position: relative;
-        width: 1253px;
+        width: $max;
         height: 119px;
         left: 0;
         padding: 0 8px;
