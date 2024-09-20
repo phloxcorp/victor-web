@@ -1,1 +1,1 @@
-export const appDownloadLink = 'https://dealscount.sng.link/Diojz/c50q?_smtype=3'
+export const appDownloadLink = 'https://dealscount.sng.link/Aiojz/ny29?_smtype=3'
