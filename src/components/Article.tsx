@@ -1,5 +1,4 @@
 import styles from './Article.module.scss'
-import amazon from '../assets/amazon.png'
 import Lottie from 'lottie-react'
 import arrowData from '../assets/arrow.json'
 import item0 from '../assets/item0.png'
@@ -34,9 +33,6 @@ export default function Article() {
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.imageWrapper}>
-        <img src={amazon} />
-      </div>
       <VSpace h={16} />
       <h1>Let's view the price history</h1>
       <div className={styles.h1WithIcon}>
